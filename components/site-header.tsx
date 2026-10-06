@@ -25,11 +25,13 @@ export function SiteHeader() {
             </a>
           ))}
         </nav>
-        <Button asChild size="sm">
-          <a href={AMAZON_URL} target="_blank" rel="noopener noreferrer">
+          <Button
+            size="sm"
+            nativeButton={false}
+            render={<a href={AMAZON_URL} target="_blank" rel="noopener noreferrer" />}
+          >
             Buy on Amazon
-          </a>
-        </Button>
+          </Button>
       </div>
     </header>
   )

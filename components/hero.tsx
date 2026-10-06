@@ -19,10 +19,13 @@ export function Hero() {
             the simplicity, humility and quiet joy He intends for us.
           </p>
           <div className="flex flex-wrap items-center gap-4">
-            <Button asChild size="lg" className="h-12 px-7 text-base">
-              <a href={AMAZON_URL} target="_blank" rel="noopener noreferrer">
-                Get your copy — $4.99
-              </a>
+            <Button
+              size="lg"
+              className="h-12 px-7 text-base"
+              nativeButton={false}
+              render={<a href={AMAZON_URL} target="_blank" rel="noopener noreferrer" />}
+            >
+              Get your copy — $4.99
             </Button>
             <a href="#about" className="text-sm font-medium underline-offset-4 hover:underline">
               Read more about the book
@@ -42,7 +45,7 @@ export function Hero() {
               className="object-cover"
             />
           </div>
-          <BookMockup className="absolute -bottom-8 -left-6 w-40 md:-left-16 md:w-52" />
+          <BookMockup priority className="absolute -bottom-8 -left-6 w-40 md:-left-16 md:w-52" />
         </div>
       </div>
     </section>
